@@ -1,11 +1,16 @@
 #input
-a=(input("x = "))
-a=float(a)
+x=(input("x = "))
+
 #proses
-b=3*(a**(3))
-c=12*(a**(2))
-d=(7/15)*a
-e=22/7
-f=(b-c)+(d-e)
+if "/" not in x:
+    x=int(x)
+else:
+    a=x.split("/")
+    p=float(a[0])
+    q=float(a[1])
+    x=p/q
+
+
+f=(3)*x**3 - (12)*x**2 + 7/15*x - 22/7
 #output
 print('Hasilnya adalah ', f)
